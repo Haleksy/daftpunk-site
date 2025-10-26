@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Homework</title>
+		<style>
+   			body {
+      			margin:0;
+      			display:flex;
+      			align-items:center;
+      			justify-content:center;
+      			background:black;
+      			font-family: Verdana;
+      			flex-direction:column;
+      			gap:12px;
+    			}
+			.paragraphe {
+      			max-width: 600px;     /* largeur maximale du texte */	
+      			margin: 20px auto;    /* auto = centre horizontalement */
+      			text-align: justify;  /* texte aligné des deux côtés */
+      			line-height: 1.6;     /* espace entre les lignes */
+      			background: white;    /* optionnel : fond blanc */
+      			padding: 15px;        /* espace autour du texte */
+      			border-radius: 8px;   /* coins arrondis */
+      			box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* petite ombre */
+    			}
+			.video-thumb {
+      			position:relative;
+      			width:90%;
+      			max-width:720px;
+      			cursor:pointer;
+      			text-decoration:none;
+      			color:inherit;
+    			}
+    			.video-thumb img { display:block; width:100%; height:auto; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.12); }
+    			.play {
+     			position:absolute;
+      			left:50%; top:50%;
+      			transform:translate(-50%,-50%);
+      			font-size:64px;
+      			line-height:1;
+     			background:rgba(0,0,0,0.45);
+     			color:white;
+     			width:96px; height:96px;
+     			border-radius:50%;
+      			display:flex; align-items:center; justify-content:center;
+    			}
+    			.caption { font-size:14px; color:#333; }
+			h1 {
+      			color: red; 
+			filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6));
+    			}
+			table {
+			background-color: white;
+      			border-collapse: collapse; /* enlève les doubles bordures */
+      			margin: 20px auto; /* centre le tableau */
+      			width: 60%; /* largeur du tableau */
+    			}
+
+    			th, td {
+     			border: 1px solid black; /* bordure autour des cases */
+      			padding: 10px; /* espace interne */
+      			text-align: center; /* texte centré */
+   			}
+
+    			th {
+     			background-color: white; /* couleur des en-têtes */
+    			}
+			.taille {
+			font-size: 50px;
+    			font-weight: 900;
+			}
+			.banniere-gauche,
+			.banniere-droite {
+ 				position: fixed;
+  				top: 0;
+				bottom :0;
+  				width: 120px; /* largeur de la bande */
+  				height: 100vh; /* prend toute la hauteur de l’écran */
+  				background-size: cover; /* couvre toute la hauteur */
+  				background-image: url('banniere.png');			
+  				background-position: center;
+  				background-repeat: no-repeat;
+  				z-index: 2;
+  				opacity: 0.9; /* légère transparence */
+  				filter: brightness(1.1);
+			}
+
+		
+			/* Positionnement à gauche et à droite */
+			.banniere-gauche {
+				left: 0;
+  				border-right: 2px solid rgba(255, 215, 0, 0.3);
+			}
+
+			.banniere-droite {
+ 				 right: 0;
+  				border-left: 2px solid rgba(255, 215, 0, 0.3);
+			}
+
+			/* Pour éviter que ton contenu soit caché derrière les bannières */
+			body {
+  				margin-left: 190px;
+  				margin-right: 190px;
+			}
+			
+
+			/* Cache la frise sur petit écran si tu veux qu’elle ne gêne pas le contenu principal */
+			@media (max-width: 900px) {
+  				.banniere-laterale {
+   			 	display: none;
+  				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="banniere-gauche"></div>
+		<div class="banniere-droite"></div>
+		
+	
+		<div class="taille">
+		<h1>Homework</h1>
+		</div>	
+		<img src= "HW.webp"/>
+		
+
+		<div class="paragraphe">
+		<p>
+		Homework est le premier album studio du groupe Daft Punk. Sorti en 1997, il comporte 16 titres et remporte un grand succès à l'époque. Quatre singles en ont été 			extraits : Da Funk, Around the World, Burnin', Revolution 909.
+		</p>
+		</div>
+		<h1>Track List</h1>
+		<table>
+    			<tr>
+      				<th>N°</th>
+      				<th>Titre</th>
+      				<th>Durée</th>
+    			</tr>
+    			<tr>
+      				<td>1.</td>
+      				<td>Daftendirekt</td>
+      				<td>2:44</td>
+    			</tr>
+    			<tr>
+      				<td>2.</td>
+      				<td>Wdpk 83.7 FM</td>
+     				<td>0:28</td>
+    			</tr>
+    			<tr>
+     				<td>3.</td>
+      				<td>Revolution 909</td>
+      				<td>5:26</td>
+    			</tr>
+			<tr>
+      				<td>4.</td>
+      				<td>Da Funk</td>
+     				<td>5:28</td>
+    			</tr>
+			<tr>
+      				<td>5.</td>
+      				<td>Phœnix</td>
+     				<td>4:55</td>
+    			</tr>
+			<tr>
+      				<td>6.</td>
+      				<td>Fresh</td>
+     				<td>4:03</td>
+    			</tr>
+			<tr>
+      				<td>7.</td>
+      				<td>Around the World</td>
+     				<td>7:07</td>
+    			</tr>
+			<tr>
+      				<td>8.</td>
+      				<td>Rollin' and Scratchin'</td>
+     				<td>7:26</td>
+    			</tr>
+			<tr>
+      				<td>9.</td>
+      				<td>Teachers</td>
+      				<td>2:52</td>
+    			</tr>
+    			<tr>
+      				<td>10.</td>
+      				<td>High Fidelity</td>
+     				<td>6:00</td>
+    			</tr>
+    			<tr>
+     				<td>11.</td>
+      				<td>Rock'n Roll</td>
+      				<td>7:32</td>
+    			</tr>
+			<tr>
+      				<td>12.</td>
+      				<td>Oh Yeah</td>
+     				<td>2:00</td>
+    			</tr>
+			<tr>
+      				<td>13.</td>
+      				<td>Burnin'</td>
+     				<td>6:53</td>
+    			</tr>
+			<tr>
+      				<td>14.</td>
+      				<td>Indo Silver Club</td>
+     				<td>4:32</td>
+    			</tr>
+			<tr>
+      				<td>15.</td>
+      				<td>Alive</td>
+     				<td>5:15</td>
+    			</tr>
+			<tr>
+      				<td>16.</td>
+      				<td>Funk Ad</td>
+     				<td>0:50</td>
+    			</tr>
+
+  		</table>
+
+		<div class="paragraphe">
+		<p>
+		Pour en savoir plus :
+			<a href="https://fr.wikipedia.org/wiki/Homework" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+		</p>
+		</div>
+		
+		<a class="video-thumb" href="https://www.youtube.com/watch?v=K0HSD_i2DvA" target="_blank" rel="noopener">
+    		<img src="https://img.youtube.com/vi/K0HSD_i2DvA/hqdefault.jpg" alt="Vignette vidéo">
+    		<div class="play">▶</div>
+  		</a>
+		
+		<a href="Daft Punk.html">
+  			<button>Retour</button>
+		</a>
+	</body>
+</html>

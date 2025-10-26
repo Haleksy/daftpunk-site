@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frise chronologique Daft Punk</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #0a0a0a, #1b1b1b);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .timeline {
+      position: relative;
+      width: 60%;
+      margin: 50px auto;
+      padding: 40px 0;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: linear-gradient(to bottom, gold, silver);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+      border-radius: 2px;
+    }
+
+    .container {
+      padding: 15px 30px;
+      position: relative;
+      width: 50%;
+    }
+
+    .container.left {
+      left: -6.5%;
+    }
+
+    .container.right {
+      left: 50%;
+    }
+
+    .content {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+      backdrop-filter: blur(6px);
+    }
+
+    .content h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: gold;
+    }
+
+    .content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(to bottom right, gold, silver);
+      border-radius: 50%;
+      top: 20px;
+      right: -10px;
+      z-index: 1;
+    }
+
+    .right::before {
+      left: -10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="timeline">
+
+    <div class="container left">
+      <div class="content">
+        <h2>1993 — Formation du groupe</h2>
+        <p>Thomas Bangalter et Guy-Manuel de Homem-Christo forment Daft Punk à Paris après leur groupe rock <em>Darlin’</em>. Naissance d’un duo emblématique de la French Touch.</p>
+        <img src="form.jpg" alt="Daft Punk début 1993">
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <h2>1997 — Homework</h2>
+        <p>Premier album. Un son brut, house et techno, avec les classiques <em>Da Funk</em> et <em>Around the World</em>.</p>
+        <img src="HW.webp" alt="Daft Punk - Homework">
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <h2>1999 — Les casques 🎭</h2>
+        <p>Thomas et Guy-Manuel adoptent leurs célèbres casques de robots. Naissance de leur identité visuelle futuriste.</p>
+        <img src="daft punk.jpg" alt="Daft Punk helmets">
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <h2>2001 — Discovery</h2>
+        <p>Virage vers la pop électronique et les sons rétro-futuristes. Contient <em>One More Time</em> et <em>Harder Better Faster Stronger</em>.</p>
+        <img src="DISCO.webp" alt="Discovery album cover">
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <h2>2003 — Interstella 5555</h2>
+        <p>Film d’animation japonais réalisé avec Leiji Matsumoto. Il illustre l’album <em>Discovery</em> dans un univers galactique vibrant.</p>
+        <img src="Interstella_5555_logo.jpg" alt="Interstella 5555 film">
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <h2>2003 — Live 1997</h2>
+        <p>Premier album live, enregistré à Birmingham. Le son brut des débuts capturé sur scène.</p>
+        <img src="télécharger.jpg" alt="Alive 1997">
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <h2>2005 — Human After All</h2>
+        <p>Album plus sombre et industriel, avec <em>Robot Rock</em> et <em>Technologic</em>.</p>
+        <img src="HAA.jpg" alt="Human After All">
+      </div>
+    </div>
+
+<div class="container right">
+      <div class="content">
+        <h2>2006 — Daft Punk's Electroma</h2>
+        <p>Premier long-métrage du duo français, drame expérimental franco-américain écrit et réalisé par les Daft Punk.</p>
+        <img src="1876146.jpeg" alt="Daft Punk's Electroma">
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <h2>2007 — Alive 2007</h2>
+        <p>Leur tournée mythique à travers le monde. L’album live remporte un Grammy Award.</p>
+        <img src="Daft Punk - Alive 2007.jpg" alt="Alive 2007">
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <h2>2010 — TRON: Legacy</h2>
+        <p>BO du film de Disney. Mélange orchestral et électro, acclamé pour son atmosphère cinématographique.</p>
+        <img src="Tron Legacy Soundtrack (Daft Punk).jpg" alt="TRON Legacy soundtrack">
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <h2>2013 — Random Access Memories</h2>
+        <p>Un hommage à la musique des années 70-80, avec des collaborations comme Pharrell Williams et Nile Rodgers.</p>
+        <img src="ram.jpg" alt="Random Access Memories">
+      </div>
+    </div>
+
+    <div class="container right">	
+      <div class="content">
+        <h2>2021 — Séparation 💔</h2>
+        <p>Le duo annonce sa fin dans une vidéo intitulée <em>Epilogue</em>, marquant la fin d’une ère.</p>
+        <img src="les-daft-punk-annoncent-leur-separation-apr-s-28-ans-de-carri-re-649.jpg" alt="Daft Punk Epilogue">
+      </div>
+    </div>
+
+  </div>
+<a href="Daft Punk.html">
+<button>Retour</button>
+</a>
+</body>
+</html>

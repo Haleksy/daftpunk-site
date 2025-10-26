@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Discovery</title>
+		<style>
+   			body {
+      			margin:0;
+      			display:flex;
+      			align-items:center;
+      			justify-content:center;
+      			background:black;
+      			font-family: Verdana;
+      			flex-direction:column;
+      			gap:12px;
+    			}
+    			.video-thumb {
+      			position:relative;
+      			width:90%;
+      			max-width:720px;
+      			cursor:pointer;
+      			text-decoration:none;
+      			color:inherit;
+    			}
+    			.video-thumb img { display:block; width:100%; height:auto; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.12); }
+    			.play {
+     			 position:absolute;
+      			left:50%; top:50%;
+      			transform:translate(-50%,-50%);
+      			font-size:64px;
+      			line-height:1;
+     			 background:rgba(0,0,0,0.45);
+     			 color:white;
+     			 width:96px; height:96px;
+     			 border-radius:50%;
+      			display:flex; align-items:center; justify-content:center;
+    			}
+    			.caption { font-size:14px; color:#333; }
+			.paragraphe {
+      			max-width: 600px;     /* largeur maximale du texte */
+      			margin: 20px auto;    /* auto = centre horizontalement */
+      			text-align: justify;  /* texte aligné des deux côtés */
+      			line-height: 1.6;     /* espace entre les lignes */
+      			background: white;    /* optionnel : fond blanc */
+      			padding: 15px;        /* espace autour du texte */
+      			border-radius: 8px;   /* coins arrondis */
+      			box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* petite ombre */
+    			}
+			h1 {
+    			/* dégradé arc-en-ciel */
+    			background: linear-gradient(90deg,
+      			#ff0000 0%,
+      			#ff7f00 15%,
+      			#ffff00 30%,
+      			#00ff00 45%,
+      			#0000ff 60%,
+      			#4b0082 75%,
+      			#8b00ff 90%);
+    			-webkit-background-clip: text;
+    			background-clip: text;
+    			color: transparent; /* rend le remplissage du texte le dégradé */
+    			text-transform: uppercase;
+    			text-align:center;
+    			/* léger effet "brillant" */
+    			filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6));
+ 			}
+			.taille {
+			font-size: 50px;
+    			font-weight: 900;
+			}
+			table {
+			background-color: white;
+      			border-collapse: collapse; /* enlève les doubles bordures */
+      			margin: 20px auto; /* centre le tableau */
+      			width: 60%; /* largeur du tableau */
+    			}
+
+    			th, td {
+     			border: 1px solid black; /* bordure autour des cases */
+      			padding: 10px; /* espace interne */
+      			text-align: center; /* texte centré */
+   			}
+
+    			th {
+     			background-color: white; /* couleur des en-têtes */
+    			}
+			.banniere-gauche,
+			.banniere-droite {
+ 				position: fixed;
+  				top: 0;
+				bottom :0;
+  				width: 120px; /* largeur de la bande */
+  				height: 100vh; /* prend toute la hauteur de l’écran */
+  				background-size: cover; /* couvre toute la hauteur */
+  				background-image: url('banniere.png');			
+  				background-position: center;
+  				background-repeat: no-repeat;
+  				z-index: 2;
+  				opacity: 0.9; /* légère transparence */
+  				filter: brightness(1.1);
+			}
+
+		
+			/* Positionnement à gauche et à droite */
+			.banniere-gauche {
+				left: 0;
+  				border-right: 2px solid rgba(255, 215, 0, 0.3);
+			}
+
+			.banniere-droite {
+ 				 right: 0;
+  				border-left: 2px solid rgba(255, 215, 0, 0.3);
+			}
+
+			/* Pour éviter que ton contenu soit caché derrière les bannières */
+			body {
+  				margin-left: 190px;
+  				margin-right: 190px;
+			}
+			
+
+			/* Cache la frise sur petit écran si tu veux qu’elle ne gêne pas le contenu principal */
+			@media (max-width: 900px) {
+  				.banniere-laterale {
+   			 	display: none;
+  				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="banniere-gauche"></div>
+		<div class="banniere-droite"></div>
+
+
+		<div class="taille">
+		<h1>Discovery</h1>
+		</div>
+		<img src= "DISCO.webp"/>
+		
+		<div class="paragraphe">
+		<p>
+		Discovery est le deuxième album studio du groupe français Daft Punk, publié le 12 mars 2001 par le label Virgin Records. Cet album marque un changement de style, passant de 		la house de Chicago de leur premier album, Homework paru en 1997, à un style plus fortement inspiré du disco, du post-disco, du garage house et du R&B. Thomas Bangalter 		décrit Discovery comme une exploration des structures des chansons, des formes musicales et de la nostalgie de l'enfance, par rapport à la musique électronique « brute » de 		Homework.
+		</p>
+		</div>
+		
+		<h1>Track List</h1>
+<table>
+    			<tr>
+      				<th>N°</th>
+      				<th>Titre</th>
+      				<th>Durée</th>
+    			</tr>
+    			<tr>
+      				<td>1.</td>
+      				<td>One More Time</td>
+      				<td>5:20</td>
+    			</tr>
+    			<tr>
+      				<td>2.</td>
+      				<td>Aerodynamic</td>
+     				<td>3:27</td>
+    			</tr>
+    			<tr>
+     				<td>3.</td>
+      				<td>Digital Love</td>
+      				<td>4:58</td>
+    			</tr>
+			<tr>
+      				<td>4.</td>
+      				<td>Harder, Better, Faster, Stronger</td>
+     				<td>3:45</td>
+    			</tr>
+			<tr>
+      				<td>5.</td>
+      				<td>Crescendolls</td>
+     				<td>3:31</td>
+    			</tr>
+			<tr>
+      				<td>6.</td>
+      				<td>Nightvision</td>
+     				<td>1:44</td>
+    			</tr>
+			<tr>
+      				<td>7.</td>
+      				<td>Superheroes</td>
+     				<td>3:57</td>
+    			</tr>
+			<tr>
+      				<td>8.</td>
+      				<td>High Life</td>
+     				<td>3:22</td>
+    			</tr>
+			<tr>
+      				<td>9.</td>
+      				<td>Something About Us</td>
+      				<td>3:51</td>
+    			</tr>
+    			<tr>
+      				<td>10.</td>
+      				<td>Voyager</td>
+     				<td>3:47</td>
+    			</tr>
+    			<tr>
+     				<td>11.</td>
+      				<td>Veridis Quo</td>
+      				<td>5:44</td>
+    			</tr>
+			<tr>
+      				<td>12.</td>
+      				<td>Short Circuit</td>
+     				<td>3:26</td>
+    			</tr>
+			<tr>
+      				<td>13.</td>
+      				<td>Face to Face</td>
+     				<td>3:58</td>
+    			</tr>
+			<tr>
+      				<td>14.</td>
+      				<td>Too Long</td>
+     				<td>10:00</td>
+    			</tr>
+  		</table>
+
+		<div class="paragraphe">
+		<p>
+		Pour en savoir plus :<a href="https://fr.wikipedia.org/wiki/Discovery_(album_de_Daft_Punk)" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+		</p>
+		</div>
+
+		<div class="paragraphe">
+		<p>
+		Animation de Leiji Matsumoto : <a href="I5555.html">Interstella 5555</a>
+		</p>
+		</div>
+		
+		<a class="video-thumb" href="https://www.youtube.com/watch?v=HhZaHf8RP6g" target="_blank" rel="noopener">
+    		<img src="https://img.youtube.com/vi/HhZaHf8RP6g/hqdefault.jpg" alt="Vignette vidéo">
+    		<div class="play">▶</div>
+  		</a>
+
+		<a href="Daft Punk.html">
+  			<button>Retour</button>
+		</a>
+	</body>
+</html>

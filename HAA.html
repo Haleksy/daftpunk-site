@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Human After All</title>
+		<style>
+   			body {
+      			margin:0;
+      			display:flex;
+      			align-items:center;
+      			justify-content:center;
+      			background:#1A1A1A;
+      			font-family: Verdana;
+      			flex-direction:column;
+      			gap:12px;
+    			}
+			.paragraphe {
+      			max-width: 600px;     /* largeur maximale du texte */	
+      			margin: 20px auto;    /* auto = centre horizontalement */
+      			text-align: justify;  /* texte aligné des deux côtés */
+      			line-height: 1.6;     /* espace entre les lignes */
+      			background: white;    /* optionnel : fond blanc */
+      			padding: 15px;        /* espace autour du texte */
+      			border-radius: 8px;   /* coins arrondis */
+      			box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* petite ombre */
+    			}
+			.video-thumb {
+      			position:relative;
+      			width:90%;
+      			max-width:720px;
+      			cursor:pointer;
+      			text-decoration:none;
+      			color:inherit;
+    			}
+    			.video-thumb img { display:block; width:100%; height:auto; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.12); }
+    			.play {
+     			position:absolute;
+      			left:50%; top:50%;
+      			transform:translate(-50%,-50%);
+      			font-size:64px;
+      			line-height:1;
+     			background:rgba(0,0,0,0.45);
+     			color:white;
+     			width:96px; height:96px;
+     			border-radius:50%;
+      			display:flex; align-items:center; justify-content:center;
+    			}
+    			.caption { font-size:14px; color:#333; }
+			h1 {
+      			color: #CFE3D0; 
+			filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6));
+    			}
+			table {
+			background-color: white;
+      			border-collapse: collapse; /* enlève les doubles bordures */
+      			margin: 20px auto; /* centre le tableau */
+      			width: 60%; /* largeur du tableau */
+    			}
+
+    			th, td {
+     			border: 1px solid black; /* bordure autour des cases */
+      			padding: 10px; /* espace interne */
+      			text-align: center; /* texte centré */
+   			}
+
+    			th {
+     			background-color: white; /* couleur des en-têtes */
+    			}
+			.taille {
+			font-size: 50px;
+    			font-weight: 900;
+			}
+			.banniere-gauche,
+			.banniere-droite {
+ 				position: fixed;
+  				top: 0;
+				bottom :0;
+  				width: 120px; /* largeur de la bande */
+  				height: 100vh; /* prend toute la hauteur de l’écran */
+  				background-size: cover; /* couvre toute la hauteur */
+  				background-image: url('banniere.png');			
+  				background-position: center;
+  				background-repeat: no-repeat;
+  				z-index: 2;
+  				opacity: 0.9; /* légère transparence */
+  				filter: brightness(1.1);
+			}
+
+		
+			/* Positionnement à gauche et à droite */
+			.banniere-gauche {
+				left: 0;
+  				border-right: 2px solid rgba(255, 215, 0, 0.3);
+			}
+
+			.banniere-droite {
+ 				 right: 0;
+  				border-left: 2px solid rgba(255, 215, 0, 0.3);
+			}
+
+			/* Pour éviter que ton contenu soit caché derrière les bannières */
+			body {
+  				margin-left: 190px;
+  				margin-right: 190px;
+			}
+			
+
+			/* Cache la frise sur petit écran si tu veux qu’elle ne gêne pas le contenu principal */
+			@media (max-width: 900px) {
+  				.banniere-laterale {
+   			 	display: none;
+  				}
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="banniere-gauche"></div>
+		<div class="banniere-droite"></div>
+
+	
+		<div class="taille">
+		<h1>Human After All</h1>
+		</div>
+
+		<img src= "HAA.jpg"/>
+		<div class="paragraphe">
+		<p>
+		Human After All est le troisième album studio du duo français de musique électronique Daft Punk paru le 14 mars 2005 chez Virgin Records. 
+		Contrairement à leur précédent album studio Discovery (2001), dont le son était inspiré du disco et produit sur une période de deux ans, Human After All est un album plus 		minimaliste et improvisé avec un mélange de guitares plus lourdes et d'électronique, et a été produit en six semaines (2 semaines de composition, 4 semaines de mixage).
+		</p>
+		</div>
+		
+		<h1>Track List</h1>
+<table>
+    			<tr>
+      				<th>N°</th>
+      				<th>Titre</th>
+      				<th>Durée</th>
+    			</tr>
+    			<tr>
+      				<td>1.</td>
+      				<td>Human After All</td>
+      				<td>5:20</td>
+    			</tr>
+    			<tr>
+      				<td>2.</td>
+      				<td>The Prime Time of Your Life</td>
+     				<td>4:23</td>
+    			</tr>
+    			<tr>
+     				<td>3.</td>
+      				<td>Robot Rock</td>
+      				<td>4:46</td>
+    			</tr>
+			<tr>
+      				<td>4.</td>
+      				<td>Steam Machine</td>
+     				<td>5:21</td>
+    			</tr>
+			<tr>
+      				<td>5.</td>
+      				<td>Make Love</td>
+     				<td>4:49</td>
+    			</tr>
+			<tr>
+      				<td>6.</td>
+      				<td>The Brainwasher</td>
+     				<td>4:08</td>
+    			</tr>
+			<tr>
+      				<td>7.</td>
+      				<td>On/Off</td>
+     				<td>0:19</td>
+    			</tr>
+			<tr>
+      				<td>8.</td>
+      				<td>Television Rules the Nation</td>
+     				<td>4:46</td>
+    			</tr>
+			<tr>
+      				<td>9.</td>
+      				<td>Technologic</td>
+      				<td>4:43</td>
+    			</tr>
+    			<tr>
+      				<td>10.</td>
+      				<td>Emotion</td>
+     				<td>6:57</td>
+    		
+  		</table>
+
+		<div class="paragraphe">
+		<p>
+		Pour en savoir plus :<a href="https://fr.wikipedia.org/wiki/Human_After_All#Album_remix" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+		</p>
+		</div>
+
+		<div class="paragraphe">
+		<p>
+		Variante :<a href="HAAremix.html">Album Remix</a>
+		</p>
+		</div>
+
+		
+		<a class="video-thumb" href="https://www.youtube.com/watch?v=sFZjqVnWBhc&list=RDsFZjqVnWBhc&start_radio=1" target="_blank" rel="noopener">
+    		<img src="https://img.youtube.com/vi/sFZjqVnWBhc/hqdefault.jpg" alt="Vignette vidéo">
+    		<div class="play">▶</div>
+  		</a>	
+
+		<a href="Daft Punk.html">
+  			<button>Retour</button>
+		</a>
+	</body>
+</html>
