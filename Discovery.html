@@ -7,7 +7,7 @@
 		<title>Discovery</title>
 		<style>
    			body {
-      			margin:0;
+      			margin:auto;
       			display:flex;
       			align-items:center;
       			justify-content:center;
@@ -40,7 +40,7 @@
     			.caption { font-size:14px; color:#333; }
 			.paragraphe {
       			max-width: 600px;     /* largeur maximale du texte */
-      			margin: 20px auto;    /* auto = centre horizontalement */
+      			margin: auto;    /* auto = centre horizontalement */
       			text-align: justify;  /* texte aligné des deux côtés */
       			line-height: 1.6;     /* espace entre les lignes */
       			background: white;    /* optionnel : fond blanc */
@@ -67,7 +67,7 @@
     			filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6));
  			}
 			.taille {
-			font-size: 50px;
+				font-size: auto;
     			font-weight: 900;
 			}
 			table {
@@ -123,7 +123,10 @@
 
 			/* Cache la frise sur petit écran si tu veux qu’elle ne gêne pas le contenu principal */
 			@media (max-width: 900px) {
-  				.banniere-laterale {
+  				.banniere-gauche {
+   			 	display: none;
+  				}
+				.banniere-droite {
    			 	display: none;
   				}
 			}
@@ -247,4 +250,5 @@
 		</a>
 	</body>
 </html>
+
 
