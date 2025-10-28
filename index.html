@@ -1,127 +1,162 @@
 <!DOCTYPE html>
-<html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Daft Punk</title>
-		<style>
-   			body {
-      			margin:auto;
-      			display:flex;
-      			align-items:center;
-      			justify-content:center;
-			background-color: black;
-      			background-image: url("f3.png"); /* chemin vers ton image */
-      			background-size: 100%;      /* l’image couvre tout l’écran */
-      			background-position: center; /* centrée */
-      			background-repeat:no-repeat;
-      			font-family: OCR A Std, monospace;
-      			flex-direction:column;
-      			gap:12px;
-    			}
-			.paragraphe {
-      			max-width: 90%;     /* largeur maximale du texte */
-      			margin:auto;    /* auto = centre horizontalement */
-      			text-align: justify;  /* texte aligné des deux côtés */
-      			line-height: 1.6;     /* espace entre les lignes */
-      			background: white;    /* optionnel : fond blanc */
-      			padding: 15px;        /* espace autour du texte */
-      			border-radius: 8px;   /* coins arrondis */
-      			box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* petite ombre */
-    			}
-			.metallic {
-    			font-family: Verdana;
-    			font-size: auto;
-    			font-weight: 900;
-    			text-transform: uppercase;
-    			letter-spacing: 6px;
-    			text-align:center;
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daft Punk</title>
 
-    			/* Dégradé doré → argenté */
-    			background: linear-gradient(90deg,
-      			#d4af37 0%,   /* or */
-      			#f1c40f 25%,  /* or clair */
-      			#f5f5f5 50%,  /* argent clair */
-      			#bdc3c7 75%,  /* argent gris */
-      			#7f8c8d 100%  /* argent foncé */
-    			);
+  <style>
+    /* --- STYLE GLOBAL --- */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #000;
+      background-image: url("f3.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      font-family: "OCR A Std", monospace;
+      min-height: 100vh;
+      text-align: center;
+    }
 
-    			-webkit-background-clip: text;
-    			background-clip: text;
-    			color: transparent;
+    /* --- TITRE METALLIQUE --- */
+    h1 {
+      font-family: Verdana, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      font-size: 2.5rem;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #d4af37, #f5f5f5, #7f8c8d);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+    }
 
-    			/* petit effet relief brillant */
-    			filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
-  			}
-			img {
-  			max-width: 100%;
-  			height: auto;
-			}
-		</style>
+    /* --- IMAGE PRINCIPALE --- */
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px 0;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    }
 
-	</head>
+    /* --- BLOCS DE CONTENU --- */
+    .paragraphe {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin: 10px auto;
+      width: 80%;
+      max-width: 600px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
 
+    .paragraphe p {
+      font-size: 1.1rem;
+      margin: 5px 0;
+    }
 
-	<body>
-		<div class="metallic">
-		<h1>Daft Punk</h1></div>
-		
-		<img src="Daft-Punk-5.gif"/>
-		
+    /* --- LIENS --- */
+    a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-		<div class="paragraphe">
-		<p>Albums studio :</p>
-		<ul>
-			<li><a href="Homework.html">Homework</a></li>
-			<li><a href="Discovery.html">Discovery</a></li>
-			<li><a href="HAA.html">Human After All</a></li>
-			<li><a href="RAM.html">Random Access Memories</a></li>
-		</ul>
-		<p> Albums live :</p>
-		<ul>
-			<li><a href="Live.html">Live 1997</a></li>
-			<li><a href="Alive.html">Alive 2007</a></li>
-			
-		</ul>
-		<p> Compilations :</p>
-		<ul>
-			<li><a href="Daft Club.html">Daft Club</a></li>
-			
-		</ul>
+    a:hover {
+      color: #fff;
+      text-shadow: 0 0 8px gold;
+    }
 
-		</div>
+    /* --- LISTES --- */
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-		
-		<div class="paragraphe">
-		<p>
-		Éléments principaux :
-			<a href="frise.html">Frise chronologique</a>
-		</p>
-		</div>
+    li {
+      margin: 6px 0;
+    }
 
+    /* --- RESPONSIVE --- */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+        letter-spacing: 4px;
+      }
 
-		<div class="paragraphe">
-		<p>
-		Pour en savoir plus :
-			<a href="https://www.bing.com/ck/a?!&&p=4d9f0c25279fe1d39eb791c3f02b0d24b85fa73e3ff534b301fc13ef9a4c8b56JmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4					&fclid=0d2a1760-b7f7-69f7-2009-029cb69c687d&psq=daft+punk&u=a1aHR0cHM6Ly9mci53aWtpcGVkaWEub3JnL3dpa2kvRGFmdF9QdW5r" target="_blank" rel="noopener noreferrer">Wikipedia</a>
-		</p>
-		</div>
+      .paragraphe {
+        width: 90%;
+        padding: 12px;
+      }
 
-		<div class="paragraphe">
-		<p>
-		Site officiel :
-			<a href="https://www.bing.com/ck/a?!&&p=05c9b8212d0bbda3a06d78f27318cbc76e7970c1e4840f5fb1b410a22afe1cd0JmltdHM9MTc1NzYzNTIwMA&ptn=3&ver=2&hsh=4&fclid=0d2a1760-			b7f7-69f7-2009-029cb69c687d&psq=daft+punk&u=a1aHR0cHM6Ly93d3cuZGFmdHB1bmsuY29tLw" target="_blank" rel="noopener noreferrer">Daft Punk</a>
-		</p>
-		</div>
-	
-	</body>
+      p, li {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Daft Punk</h1>
+
+  <img src="Daft-Punk-5.gif" alt="Daft Punk Animation">
+
+  <div class="paragraphe">
+    <p><strong>Albums studio :</strong></p>
+    <ul>
+      <li><a href="Homework.html">Homework</a></li>
+      <li><a href="Discovery.html">Discovery</a></li>
+      <li><a href="HAA.html">Human After All</a></li>
+      <li><a href="RAM.html">Random Access Memories</a></li>
+    </ul>
+  </div>
+
+  <div class="paragraphe">
+    <p><strong>Albums live :</strong></p>
+    <ul>
+      <li><a href="Live.html">Alive 1997</a></li>
+      <li><a href="Alive.html">Alive 2007</a></li>
+    </ul>
+  </div>
+
+  <div class="paragraphe">
+    <p><strong>Compilations :</strong></p>
+    <ul>
+      <li><a href="Daft Club.html">Daft Club</a></li>
+    </ul>
+  </div>
+
+  <div class="paragraphe">
+    <p><strong>Éléments principaux :</strong>  
+      <a href="frise.html">Frise chronologique</a>
+    </p>
+  </div>
+
+  <div class="paragraphe">
+    <p><strong>Pour en savoir plus :</strong>  
+      <a href="https://fr.wikipedia.org/wiki/Daft_Punk" target="_blank">Wikipedia</a>
+    </p>
+  </div>
+
+  <div class="paragraphe">
+    <p><strong>Site officiel :</strong>  
+      <a href="https://www.daftpunk.com/" target="_blank">Daft Punk</a>
+    </p>
+  </div>
+
+</body>
 </html>
-
-
-
-
-
-
-
-
