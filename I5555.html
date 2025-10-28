@@ -1,146 +1,197 @@
 <!DOCTYPE html>
-<html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Discovery</title>
-		<style>
-   			body {
-      			margin: 0;
-     			height: 100vh;
-      			background-image: url("R.jpg"); /* chemin vers ton image */
-      			background-size: cover;      /* l’image couvre tout l’écran */	
-      			color: white; /* texte blanc pour être lisible */
-     			font-family: OCR A Std, monospace;
-      			text-align: center;
-      			display:flex;
-      			flex-direction:column;
-      			gap:12px;
-    			}
-			.paragraphe {
-      			max-width: 600px;     /* largeur maximale du texte */	
-      			margin: 20px auto;    /* auto = centre horizontalement */
-      			text-align: center;        			
-			line-height: 1.6;     /* espace entre les lignes */
-      			background: black;    /* optionnel : fond blanc */
-      			padding: 15px;        /* espace autour du texte */
-      			border-radius: 8px;   /* coins arrondis */
-      			box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* petite ombre */
-			opacity: 0.7; /* 1 = opaque, 0 = invisible */
-    			}
-			h1 {
-      			color: purple; 
-    			}
-			.gallery {
-      			display: grid;
-      			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      			gap: 20px;
-      			max-width: 900px;
-      			margin: 40px auto;
-    			}
-			.card {
-      			text-align: center;	
-    			}
-    			.card img {
-      			width: 100%;
-      			border-radius: 8px;
-      			display: block;
-      			margin-bottom: 8px;
-    			}
-    			.card p {
-      			margin: 0;
-      			font-size: 16px;
-    			}
-			img {
-			border-radius: 8px;
-			}
-		</style>	
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discovery</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-image: url("R.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: "OCR A Std", monospace;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
 
-	</head>
+    img {
+      border-radius: 8px;
+      max-width: 100%;
+      height: auto;
+    }
 
-	<body>
-		
-		<div class="taille">
-		<img src= "Interstella_5555_logo.jpg"/>
-		</div>
-			
-		<div class="paragraphe">
-		<p>Interstella 5555: The Story of the Secret Star System[note 1] (インターステラ5555, Intāsutera fō faibu?), est un film d'animation franco-japonais musical de science-fiction, 		sans dialogue, réalisé par Kazuhisa Takenouchi et par le studio Toei Animation, et sorti en 2003.
+    .paragraphe {
+      max-width: 600px;
+      width: 90%;
+      margin: 20px auto;
+      text-align: center;
+      line-height: 1.6;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
 
-		Il allie le graphisme de Leiji Matsumoto, dessinateur d’Albator et la musique intégrale de l’album Discovery du groupe Daft Punk. Il relate l'histoire d'un groupe de 			musiciens extraterrestres enlevés qui deviennent des stars sur Terre, puis tentent de retrouver leurs souvenirs et leur liberté.</p>
-		</div>
-		
+    h1 {
+      color: purple;
+    }
 
-		<div class="gallery">
-    			<div class="card">
-      			<img src="Arpegius.webp" alt="Arpegius">
-			<div class="paragraphe">
-      			<p>Arpegius</p>
-			</div>
-    			</div>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      width: 90%;
+      max-width: 900px;
+      margin: 20px auto 40px auto;
+    }
 
-    			<div class="card">
-      			<img src="Stella.webp" alt="Stella">
-			<div class="paragraphe">
-      			<p>Stella</p>
-    			</div>
-			</div>
+    .card {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 10px;
+      transition: transform 0.2s ease;
+    }
 
-    			<div class="card">
-      			<img src="Baryl.webp" alt="Baryl">
-			<div class="paragraphe">
-      			<p>Baryl</p>
-    			</div>	
-			</div>
+    .card:hover {
+      transform: scale(1.05);
+    }
 
-			<div class="card">
-      			<img src="Octave.webp" alt="Octave">
-			<div class="paragraphe">
-      			<p>Octave</p>
-    			</div>
-			</div>
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+      margin-bottom: 8px;
+    }
 
-    			<div class="card">
-      			<img src="dolls.webp" alt="The Crescendolls">
-			<div class="paragraphe">
-      			<p>The Crescendolls</p>
-    			</div>
-			</div>
+    .card p {
+      margin: 0;
+      font-size: 16px;
+    }
 
-    			<div class="card">
-      			<img src="Shep.webp" alt="Shep">
-			<div class="paragraphe">
-      			<p>Shep</p>
-    			</div>
-			</div>
-			
-			<div class="card">
-      			<img src="Earl.webp" alt="Earl de Darkwood">
-			<div class="paragraphe">
-      			<p>Earl de Darkwood</p>
-			</div>
-    			</div>
+    button {
+      background: linear-gradient(45deg, purple, violet);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-			<div class="card">
-      			<img src="Manager.webp" alt="Manager">
-			<div class="paragraphe">
-      			<p>Manager</p>
-    			</div>
-			</div>
-  		</div>
+    button:hover {
+      transform: scale(1.1);
+      background: linear-gradient(45deg, violet, purple);
+    }
 
-		<div class="paragraphe">
-		<p>Pour savoir plus :
-		<a href="https://fr.wikipedia.org/wiki/Interstella_5555:_The_Story_of_the_Secret_Star_System" target="_blank" rel="noopener noreferrer">Wikipedia</a></p>
-		</div>
+    /* 🌐 Adaptation mobile */
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+      }
 
-		<a href="Discovery.html">
-  			<button>Retour</button>
-		</a>
-	</body>
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .paragraphe {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      button {
+        width: 80%;
+        max-width: 250px;
+        margin: 10px auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .paragraphe {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="taille">
+    <img src="Interstella_5555_logo.jpg" alt="Interstella 5555 logo"/>
+  </div>
+
+  <div class="paragraphe">
+    <p>
+      <strong>Interstella 5555: The Story of the Secret Star System</strong> est un film d'animation franco-japonais de science-fiction sans dialogue, 
+      réalisé par Kazuhisa Takenouchi et le studio Toei Animation, sorti en 2003.<br><br>
+      Il allie le graphisme de <em>Leiji Matsumoto</em> (créateur d’Albator) à la musique intégrale de <em>Discovery</em> de Daft Punk. 
+      Il raconte l’histoire d’un groupe de musiciens extraterrestres enlevés, devenus stars sur Terre, qui tentent de retrouver leur liberté.
+    </p>
+  </div>
+
+  <div class="gallery">
+    <div class="card">
+      <img src="Arpegius.webp" alt="Arpegius">
+      <p>Arpegius</p>
+    </div>
+
+    <div class="card">
+      <img src="Stella.webp" alt="Stella">
+      <p>Stella</p>
+    </div>
+
+    <div class="card">
+      <img src="Baryl.webp" alt="Baryl">
+      <p>Baryl</p>
+    </div>
+
+    <div class="card">
+      <img src="Octave.webp" alt="Octave">
+      <p>Octave</p>
+    </div>
+
+    <div class="card">
+      <img src="dolls.webp" alt="The Crescendolls">
+      <p>The Crescendolls</p>
+    </div>
+
+    <div class="card">
+      <img src="Shep.webp" alt="Shep">
+      <p>Shep</p>
+    </div>
+
+    <div class="card">
+      <img src="Earl.webp" alt="Earl de Darkwood">
+      <p>Earl de Darkwood</p>
+    </div>
+
+    <div class="card">
+      <img src="Manager.webp" alt="Manager">
+      <p>Manager</p>
+    </div>
+  </div>
+
+  <div class="paragraphe">
+    <p>
+      Pour en savoir plus :  
+      <a href="https://fr.wikipedia.org/wiki/Interstella_5555:_The_Story_of_the_Secret_Star_System" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+    </p>
+  </div>
+
+  <a href="Discovery.html">
+    <button>Retour</button>
+  </a>
+
+</body>
 </html>
-
-
-
-
