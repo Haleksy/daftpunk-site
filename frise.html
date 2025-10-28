@@ -9,13 +9,13 @@
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(180deg, #0a0a0a, #1b1b1b);
       color: #fff;
-      margin: auto;
+      margin: 0;
       padding: 0;
     }
 
     .timeline {
       position: relative;
-      width: 60%;
+      width: 80%;
       margin: auto;
       padding: 40px 0;
     }
@@ -30,6 +30,7 @@
       left: 50%;
       margin-left: -2px;
       border-radius: 2px;
+      transition: left 0.3s ease;
     }
 
     .container {
@@ -82,6 +83,66 @@
 
     .right::before {
       left: -10px;
+    }
+
+    /* --- Bouton retour stylisé --- */
+    button {
+      background: linear-gradient(to right, gold, orange);
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 30px auto;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, orange, gold);
+    }
+
+    /* --- 🌙 Responsive --- */
+    @media (max-width: 900px) {
+      .timeline {
+        width: 90%;
+      }
+
+      .timeline::after {
+        left: 20px;
+      }
+
+      .container {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 25px;
+      }
+
+      .container.left,
+      .container.right {
+        left: 0;
+      }
+
+      .container::before {
+        left: 10px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .content h2 {
+        font-size: 1.1rem;
+      }
+
+      .content {
+        padding: 15px;
+      }
+
+      button {
+        width: 80%;
+      }
     }
   </style>
 </head>
@@ -145,7 +206,7 @@
       </div>
     </div>
 
-<div class="container right">
+    <div class="container right">
       <div class="content">
         <h2>2006 — Daft Punk's Electroma</h2>
         <p>Premier long-métrage du duo français, drame expérimental franco-américain écrit et réalisé par les Daft Punk.</p>
@@ -177,7 +238,7 @@
       </div>
     </div>
 
-    <div class="container right">	
+    <div class="container right">
       <div class="content">
         <h2>2021 — Séparation 💔</h2>
         <p>Le duo annonce sa fin dans une vidéo intitulée <em>Epilogue</em>, marquant la fin d’une ère.</p>
@@ -186,10 +247,9 @@
     </div>
 
   </div>
-<a href="index.html">
-<button>Retour</button>
-</a>
+
+  <a href="index.html">
+    <button>Retour</button>
+  </a>
 </body>
 </html>
-
-
