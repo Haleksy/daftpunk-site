@@ -3,22 +3,22 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Daft Club</title>
 		<style>
    			body {
-      			margin:0;
+      			margin:auto;
       			display:flex;
       			align-items:center;
       			justify-content:center;
       			background:black;
-      			font-family: Verdana;
+      			font-family: OCR A Std, monospace;
       			flex-direction:column;
       			gap:12px;
     			}
 			.paragraphe {
       			max-width: 600px;     /* largeur maximale du texte */	
-      			margin: 20px auto;    /* auto = centre horizontalement */
+      			margin: auto;    /* auto = centre horizontalement */
       			text-align: justify;  /* texte aligné des deux côtés */
       			line-height: 1.6;     /* espace entre les lignes */
       			background: white;    /* optionnel : fond blanc */
@@ -69,7 +69,7 @@
      			background-color: white; /* couleur des en-têtes */
     			}
 			.taille {
-			font-size: 50px;
+			font-size: auto;
     			font-weight: 900;
 			}
 			.banniere-gauche,
@@ -100,16 +100,17 @@
   				border-left: 2px solid rgba(255, 215, 0, 0.3);
 			}
 
-			/* Pour éviter que ton contenu soit caché derrière les bannières */
-			body {
-  				margin-left: 190px;
-  				margin-right: 190px;
+			img {
+  			max-width: 100%;
+  			height:auto;
 			}
-			
 
 			/* Cache la frise sur petit écran si tu veux qu’elle ne gêne pas le contenu principal */
 			@media (max-width: 900px) {
-  				.banniere-laterale {
+  				.banniere-droite {
+   			 	display: none;
+  				}
+				.banniere-gauche {
    			 	display: none;
   				}
 			}
@@ -144,6 +145,7 @@
 		</a>
 	</body>
 </html>
+
 
 
 
